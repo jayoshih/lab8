@@ -18,12 +18,19 @@ function capture(video, canvas, snapshotButton) {
     video.attr('src', window.URL.createObjectURL(mediaStream));
     snapshotButton.click(function(e) {
         console.log("Taking photo");
+        console.log(window.loc);
+
         //Calculate dimension of photo from the video element.
         var width = video.width();
         var height = video.height();
         canvas.attr('width', width);
         canvas.attr('height', height);
         ctx.drawImage(video[0], 0, 0, width, height);
+        var image = canvas[0].toDataURL("image/png");
+        google.maps.event.addListener(window.marker, 'click', function() {
+           $("#photo").attr('src', image);
+        });
+        
     });
   };
 
@@ -38,4 +45,3 @@ function capture(video, canvas, snapshotButton) {
       successCallback, errorCallback);
 
 };
-

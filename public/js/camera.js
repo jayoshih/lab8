@@ -17,9 +17,6 @@ function capture(video, canvas, snapshotButton) {
     //draw the image on the canvas.
     video.attr('src', window.URL.createObjectURL(mediaStream));
     snapshotButton.click(function(e) {
-        console.log("Taking photo");
-        console.log(window.loc);
-
         //Calculate dimension of photo from the video element.
         var width = video.width();
         var height = video.height();

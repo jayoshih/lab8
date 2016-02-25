@@ -43,6 +43,7 @@
     <div id="googleMaps" class="profile">
       <h1>Where am I?</h1>
        <h4><strong>Click the map to take a picture at a location!</strong></h4>
+        <h6 class="modal-title" id="myModalLabel">When you click on the marker again, your photo will appear above</h6>
       <div id="map"></div>
     </div>
   </div>
@@ -52,6 +53,7 @@
     <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Take photo at this location</h4>
+
             <div id="camera" class="profile">
               <canvas id="camera-canvas"></canvas>
               <video autoplay id="camera-video"></video>

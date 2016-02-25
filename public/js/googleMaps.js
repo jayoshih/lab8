@@ -23,10 +23,6 @@ function initMap() {
 
 function placeMarkerAndPanTo(latLng, map) {
   $("#photo_modal").modal("toggle");
-   $("#camera-video").css("display", "block");
-    $("#camera-button").css("display", "block");
-  var found = false;
-  window.loc = latLng;
    window.marker = new google.maps.Marker({
         position: latLng,
         map: map
